@@ -1,0 +1,60 @@
+<meta charset="UTF-8">
+<h1>URNA ELETRONICA</h1>
+Candidatos: <br>
+13 - Lula <br>
+22 - Bolsonaro <br>
+45 - Ciro<br>
+<br>
+
+<script>
+
+	function pulaLinha() {
+		document.write("<br><br>");
+	}
+
+	function mostra(frase) {
+		document.write(frase);
+		pulaLinha();
+	}
+
+	var lula = 0
+	var bolsonaro = 0
+	var ciro = 0
+	var voto = 1
+
+	while (voto == 1) {
+
+		var candidato = parseInt(prompt("Digite o número do seu candidato?"));
+
+		if (candidato == 13) {
+			lula++;
+		}
+
+		else if (candidato == 22) {
+			bolsonaro++;
+		}
+
+		else if (candidato == 45) {
+			ciro++;
+		}
+		else if (candidato !== 13 && candidato !== 22 && candidato !== 45) {
+			alert("Número incorreto, seu voto foi anulado!");
+			break;
+		}
+
+		var continuar = parseInt(prompt("Deseja votar novamente? Digite 1 para SIM e 2 para FINALIZAR"));
+
+		if (continuar == 2) {
+			break;
+		}
+	}
+
+	mostra("Votos de cada candidato:");
+	mostra("Lula " + lula);
+	mostra("Bolsonaro " + bolsonaro);
+	mostra("Ciro " + ciro)
+
+
+
+
+</script>

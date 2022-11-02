@@ -1,0 +1,36 @@
+<meta charset="UTF-8">
+
+<input />
+<button>CLIQUE AQUI</button>
+
+<script>
+
+    var input = document.querySelector(("input");
+    input.focus();
+
+    var numeroPensado = Math.round(Math.random() * 10);
+
+    function verifica() {
+
+        if (input.value == numeroPensado) {
+
+            alert("Uau! Você acertou, pois eu pensei no " + numeroPensado);
+
+        } else {
+
+            if (input.value > numeroPensado) {
+
+                alert("Você errou! Seu chute é maior que o número pensado!");
+
+            } else {
+
+                alert("Você errou! Seu chute é menor que o número pensado!");
+            }
+        }
+    }
+
+    var btn = document.querySelector("button");
+    btn.onclick = verifica;
+
+
+</script>
